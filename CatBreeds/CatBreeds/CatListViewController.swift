@@ -47,6 +47,16 @@ extension CatListViewController: UITableViewDataSource {
             
             cell.breedName.text = currentBreed.breed
             
+            switch currentBreed.coat {
+            case "Short":
+                cell.coatIcon.image = UIImage(named: "shortIcon")
+            case "Long":
+                cell.coatIcon.image = UIImage(named: "longIcon")
+            default:
+                cell.coatIcon.image = nil
+            }
+            
+            
         }
         
         return cell

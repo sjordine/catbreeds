@@ -35,7 +35,8 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H48-Wg-LRk">
                                                     <rect key="frame" x="10" y="10.000000000000004" width="50" height="50.333333333333343"/>
-                                                    <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="H48-Wg-LRk" secondAttribute="height" multiplier="1:1" id="NRJ-u4-6hO"/>
                                                         <constraint firstAttribute="width" constant="50" id="rWU-sl-vDx"/>
