@@ -12,8 +12,11 @@ struct CatServices {
     var countryDatabase = CountryDataBase.shared
     
     func retrieveCatBreeds() throws -> [CatBreedDetail] {
+        // 1 - Retrieve data from an external source
         let data = try retrieveCatBreedsData()
+        // 2 - Process it to json
         let breedList = try parseBreedData(from: data)
+        // 3 - Additional computation to make data fits our (business) needs
         let processedList = adjustBreedCountries(from:breedList)
         
         return processedList
