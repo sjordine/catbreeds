@@ -12,25 +12,7 @@ struct CatServices {
     func retrieveCatBreeds() throws -> [CatBreed] {
         let data = try retrieveCatBreedsData()
         let breedList = try parseBreedData(from: data)
-        let processedList = breedList.map { breedData in
-            
-            let searchDevelopedCountry = /developed in (the )*(?<developedCountry>.+?) \(./
-            
-            var countryName = breedData.country
-            
-            if let result = try? searchDevelopedCountry
-                .firstMatch(in: breedData.country) {
-                countryName = String(result.developedCountry)
-            }
-            
-            
-            return CatBreed(breed: breedData.breed,
-                            country: countryName,
-                            origin: breedData.origin,
-                            coat: breedData.coat,
-                            pattern: breedData.pattern)
-            
-        }
+        let processedList = adjustBreedCountries(from:breedList)
         
         return processedList
     }
@@ -55,6 +37,28 @@ struct CatServices {
             return breedsData
         } catch {
             throw CatBreedFileError.invalidData
+        }
+    }
+    
+    private func adjustBreedCountries(from breedList: [CatBreed]) -> [CatBreed] {
+        return breedList.map { breedData in
+            
+            let searchDevelopedCountry = /developed in (the )*(?<developedCountry>.+?) \(./
+            
+            var countryName = breedData.country
+            
+            if let result = try? searchDevelopedCountry
+                .firstMatch(in: breedData.country) {
+                countryName = String(result.developedCountry)
+            }
+            
+            
+            return CatBreed(breed: breedData.breed,
+                            country: countryName,
+                            origin: breedData.origin,
+                            coat: breedData.coat,
+                            pattern: breedData.pattern)
+            
         }
     }
     
