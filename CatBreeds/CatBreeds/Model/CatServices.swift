@@ -40,26 +40,31 @@ struct CatServices {
         }
     }
     
+    
+    
     private func adjustBreedCountries(from breedList: [CatBreed]) -> [CatBreed] {
-        return breedList.map { breedData in
-            
-            let searchDevelopedCountry = /developed in (the )*(?<developedCountry>.+?) \(./
-            
-            var countryName = breedData.country
-            
-            if let result = try? searchDevelopedCountry
-                .firstMatch(in: breedData.country) {
-                countryName = String(result.developedCountry)
-            }
-            
-            
-            return CatBreed(breed: breedData.breed,
-                            country: countryName,
-                            origin: breedData.origin,
-                            coat: breedData.coat,
-                            pattern: breedData.pattern)
+        breedList.map { breedData in
+            adjustCountryName(breedData)
             
         }
+    }
+    
+    private func adjustCountryName(_ breedData: CatBreed) -> CatBreed {
+        let searchDevelopedCountry = /developed in (the )*(?<developedCountry>.+?) \(./
+        
+        var countryName = breedData.country
+        
+        if let result = try? searchDevelopedCountry
+            .firstMatch(in: breedData.country) {
+            countryName = String(result.developedCountry)
+        }
+        
+        
+        return CatBreed(breed: breedData.breed,
+                        country: countryName,
+                        origin: breedData.origin,
+                        coat: breedData.coat,
+                        pattern: breedData.pattern)
     }
     
 }
