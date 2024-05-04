@@ -24,7 +24,7 @@ class CatListViewController: UIViewController {
         catBreedList.dataSource = self
         Task {
             //1 - Could return as an empty list! Why?
-            let breedsData = retrieveCatBreeds()
+            let breedsData = try retrieveCatBreeds()
             
             if !breedsData.isEmpty {
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
@@ -33,14 +33,9 @@ class CatListViewController: UIViewController {
         }
     }
     
-    func retrieveCatBreeds() -> [CatBreed] {
-        do {
-            let data = try retrieveCatBreedsData()
-            return try parseBreedData(from: data)
-        } catch {
-            //1.1 - Empty list due to an error retrieving data
-            return []
-        }
+    func retrieveCatBreeds() throws -> [CatBreed] {
+        let data = try retrieveCatBreedsData()
+        return try parseBreedData(from: data)
     }
     
     func retrieveCatBreedsData() throws -> Data {
