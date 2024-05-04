@@ -13,7 +13,12 @@ class CatListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Task {
+            // Do any additional setup after loading the view.
+            if let url = URL(string: "https://catfact.ninja/breeds") {
+                let (data, response) = try await URLSession.shared.data(from: url)
+            }
+        }
     }
 
 
