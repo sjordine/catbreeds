@@ -52,6 +52,8 @@ extension CatListViewController: UITableViewDataSource {
                 cell.coatIcon.image = UIImage(named: "shortIcon")
             case "Long":
                 cell.coatIcon.image = UIImage(named: "longIcon")
+            case "Hairless/Furry down":
+                cell.coatIcon.image = UIImage(named: "hairlessIcon")
             default:
                 cell.coatIcon.image = nil
             }
