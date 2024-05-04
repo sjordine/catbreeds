@@ -13,15 +13,23 @@ struct CatServices {
         let data = try retrieveCatBreedsData()
         let breedList = try parseBreedData(from: data)
         let processedList = breedList.map { breedData in
-            if breedData.country.contains("developed in") {
-                return CatBreed(breed: breedData.breed,
-                                country: "TO BE DEFINED",
-                                origin: breedData.origin,
-                                coat: breedData.coat,
-                                pattern: breedData.pattern)
-            } else {
-                return breedData
+            
+            let searchDevelopedCountry = /developed in (the )*(?<developedCountry>.+?) \(./
+            
+            var countryName = breedData.country
+            
+            if let result = try? searchDevelopedCountry
+                .firstMatch(in: breedData.country) {
+                countryName = String(result.developedCountry)
             }
+            
+            
+            return CatBreed(breed: breedData.breed,
+                            country: countryName,
+                            origin: breedData.origin,
+                            coat: breedData.coat,
+                            pattern: breedData.pattern)
+            
         }
         
         return processedList
