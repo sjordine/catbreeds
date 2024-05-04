@@ -13,6 +13,8 @@ class CatListViewController: UIViewController {
     
     var breeds:[CatBreedInfo] = []
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         catBreedList.dataSource = self
@@ -21,21 +23,7 @@ class CatListViewController: UIViewController {
             let breedsData = retrieveCatBreeds()
 
             if !breedsData.isEmpty {
-                breeds = breedsData.map { catBreed in
-                    var iconName = ""
-                    switch catBreed.coat {
-                    case "Short":
-                        iconName = "shortIcon"
-                    case "Long":
-                        iconName = "longIcon"
-                    case "Hairless/Furry down":
-                        iconName = "hairlessIcon"
-                    default:
-                        iconName = ""
-                    }
-                    return CatBreedInfo(breed: catBreed.breed,
-                                        coatIcon: iconName)
-                }
+                breeds = prepareBreedsToPresent(breedsData: breedsData)
                 catBreedList.reloadData()
             }
         }
@@ -54,6 +42,24 @@ class CatListViewController: UIViewController {
             }
         } else {
             return []
+        }
+    }
+    
+    func prepareBreedsToPresent(breedsData: [CatBreed]) -> [CatBreedInfo] {
+        breedsData.map { catBreed in
+            var iconName = ""
+            switch catBreed.coat {
+            case "Short":
+                iconName = "shortIcon"
+            case "Long":
+                iconName = "longIcon"
+            case "Hairless/Furry down":
+                iconName = "hairlessIcon"
+            default:
+                iconName = ""
+            }
+            return CatBreedInfo(breed: catBreed.breed,
+                                coatIcon: iconName)
         }
     }
     
