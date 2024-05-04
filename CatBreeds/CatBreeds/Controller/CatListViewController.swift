@@ -7,27 +7,19 @@
 
 import UIKit
 
-enum CatBreedFileError: Error {
-    case noBreedFile
-    case unableToReadFile
-    case invalidData
-}
-
 class CatListViewController: UIViewController {
     
     @IBOutlet weak var catBreedList: UITableView!
     
     var breeds:[CatBreedInfo] = []
-    
+    let catServices = CatServices()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         catBreedList.dataSource = self
         Task {
             do {
-                // 1 - Retrieve data fro an external source
-                let breedsData = try retrieveCatBreeds()
+                let breedsData = try catServices.retrieveCatBreeds()
                 // 2 - Prepare data for presenting
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
                 // 3 - Present data
@@ -49,34 +41,6 @@ class CatListViewController: UIViewController {
         self.present(alert,
                      animated: true,
                      completion: nil)
-    }
-    
-    func retrieveCatBreeds() throws -> [CatBreed] {
-        let data = try retrieveCatBreedsData()
-        return try parseBreedData(from: data)
-    }
-    
-    func retrieveCatBreedsData() throws -> Data {
-        if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: file)
-                return data
-            } catch {
-                throw CatBreedFileError.unableToReadFile
-            }
-        } else {
-            throw CatBreedFileError.noBreedFile
-        }
-    }
-    
-    func parseBreedData(from data: Data) throws -> [CatBreed] {
-        do {
-            let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
-                                                      from: data)
-            return breedsData
-        } catch {
-            throw CatBreedFileError.invalidData
-        }
     }
     
     func prepareBreedsToPresent(breedsData: [CatBreed]) -> [CatBreedInfo] {

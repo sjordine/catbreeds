@@ -19,6 +19,8 @@
 		768CA3462BE66AD100BF5116 /* CatBreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3452BE66AD100BF5116 /* CatBreedTableViewCell.swift */; };
 		768CA3482BE6747500BF5116 /* CatBreedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3472BE6747500BF5116 /* CatBreedInfo.swift */; };
 		768CA34A2BE67DDB00BF5116 /* CatBreedPresentationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3492BE67DDB00BF5116 /* CatBreedPresentationTest.swift */; };
+		768CA3512BE69F4E00BF5116 /* CatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3502BE69F4E00BF5116 /* CatServices.swift */; };
+		768CA3532BE69FFC00BF5116 /* CatBreedFileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3522BE69FFC00BF5116 /* CatBreedFileError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		768CA3452BE66AD100BF5116 /* CatBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedTableViewCell.swift; sourceTree = "<group>"; };
 		768CA3472BE6747500BF5116 /* CatBreedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedInfo.swift; sourceTree = "<group>"; };
 		768CA3492BE67DDB00BF5116 /* CatBreedPresentationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedPresentationTest.swift; sourceTree = "<group>"; };
+		768CA3502BE69F4E00BF5116 /* CatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatServices.swift; sourceTree = "<group>"; };
+		768CA3522BE69FFC00BF5116 /* CatBreedFileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedFileError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				768CA3322BE661BF00BF5116 /* CatBreed.swift */,
+				768CA3502BE69F4E00BF5116 /* CatServices.swift */,
+				768CA3522BE69FFC00BF5116 /* CatBreedFileError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,10 +261,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				768CA3232BE65C9D00BF5116 /* CatListViewController.swift in Sources */,
+				768CA3512BE69F4E00BF5116 /* CatServices.swift in Sources */,
 				768CA31F2BE65C9D00BF5116 /* AppDelegate.swift in Sources */,
 				768CA3212BE65C9D00BF5116 /* SceneDelegate.swift in Sources */,
 				768CA3482BE6747500BF5116 /* CatBreedInfo.swift in Sources */,
 				768CA3332BE661BF00BF5116 /* CatBreed.swift in Sources */,
+				768CA3532BE69FFC00BF5116 /* CatBreedFileError.swift in Sources */,
 				768CA3462BE66AD100BF5116 /* CatBreedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
