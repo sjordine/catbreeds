@@ -20,9 +20,8 @@ class CatListViewController: UIViewController {
         Task {
             do {
                 let breedsData = try catServices.retrieveCatBreeds()
-                // 2 - Prepare data for presenting
+
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
-                // 3 - Present data
                 catBreedList.reloadData()
             } catch {
                 // 4 - Present error, if any
@@ -46,7 +45,8 @@ class CatListViewController: UIViewController {
     func prepareBreedsToPresent(breedsData: [CatBreed]) -> [CatBreedInfo] {
         breedsData.map { catBreed in
             let iconName = coatIcon(from: catBreed.coat)
-            return CatBreedInfo(breed: catBreed.breed,
+            return CatBreedInfo(breed: catBreed.breed, 
+                                countryName: catBreed.country,
                                 coatIcon: iconName)
         }
     }
@@ -82,10 +82,9 @@ extension CatListViewController: UITableViewDataSource {
         if let cell = cell as? CatBreedTableViewCell {
             
             cell.breedName.text = currentBreed.breed
-            
+            cell.countryName.text = currentBreed.countryName
             cell.coatIcon.image = UIImage(named: currentBreed.coatIcon)
-            
-            
+  
         }
         
         return cell
