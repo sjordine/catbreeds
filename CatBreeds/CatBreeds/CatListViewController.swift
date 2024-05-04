@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum CatBreedFileError: Error {
+    case noBreedFile
+    case unableToReadFile
+    case invalidData
+}
+
 class CatListViewController: UIViewController {
     
     @IBOutlet weak var catBreedList: UITableView!
@@ -28,27 +34,25 @@ class CatListViewController: UIViewController {
     }
     
     func retrieveCatBreeds() -> [CatBreed] {
-        if let data = retrieveCatBreedsData() {
-            // 1.2 - Could return an empty cat breeds list. Why?
+        do {
+            let data = try retrieveCatBreedsData()
             return parseBreedData(from: data)
-        } else {
-            // 1.1 - Return empty if data == nil. Why nil?
+        } catch {
+            //1.1 - Empty list due to an error retrieving data
             return []
         }
     }
     
-    func retrieveCatBreedsData() -> Data? {
+    func retrieveCatBreedsData() throws -> Data {
         if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: file)
                 return data
             } catch {
-                //1.1.2 -  nil due to an error reading breed file!
-                return nil
+                throw CatBreedFileError.unableToReadFile
             }
         } else {
-            // 1.1.1 - nil due to an inexistent breed file!
-            return nil
+            throw CatBreedFileError.noBreedFile
         }
     }
     
