@@ -17,7 +17,7 @@ class CatListViewController: UIViewController {
         super.viewDidLoad()
         catBreedList.dataSource = self
         Task {
-            
+            //1 - Could return as an empty list! Why?
             let breedsData = retrieveCatBreeds()
             
             if !breedsData.isEmpty {
@@ -29,8 +29,10 @@ class CatListViewController: UIViewController {
     
     func retrieveCatBreeds() -> [CatBreed] {
         if let data = retrieveCatBreedsData() {
+            // 1.2 - Could return an empty cat breeds list. Why?
             return parseBreedData(from: data)
         } else {
+            // 1.1 - Return empty if data == nil. Why nil?
             return []
         }
     }
@@ -41,9 +43,11 @@ class CatListViewController: UIViewController {
                 let data = try Data(contentsOf: file)
                 return data
             } catch {
+                //1.1.2 -  nil due to an error reading breed file!
                 return nil
             }
         } else {
+            // 1.1.1 - nil due to an inexistent breed file!
             return nil
         }
     }
@@ -54,6 +58,8 @@ class CatListViewController: UIViewController {
                                                       from: data)
             return breedsData
         } catch {
+            //1.2.1 - An empty list due to an error decoding JSON
+            // according to expected structure (invalid data format)
             return []
         }
     }
