@@ -36,7 +36,7 @@ class CatListViewController: UIViewController {
     func retrieveCatBreeds() -> [CatBreed] {
         do {
             let data = try retrieveCatBreedsData()
-            return parseBreedData(from: data)
+            return try parseBreedData(from: data)
         } catch {
             //1.1 - Empty list due to an error retrieving data
             return []
@@ -56,15 +56,13 @@ class CatListViewController: UIViewController {
         }
     }
     
-    func parseBreedData(from data: Data) -> [CatBreed] {
+    func parseBreedData(from data: Data) throws -> [CatBreed] {
         do {
             let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
                                                       from: data)
             return breedsData
         } catch {
-            //1.2.1 - An empty list due to an error decoding JSON
-            // according to expected structure (invalid data format)
-            return []
+            throw CatBreedFileError.invalidData
         }
     }
     
