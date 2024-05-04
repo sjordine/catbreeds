@@ -19,28 +19,33 @@ class CatListViewController: UIViewController {
     
     var breeds:[CatBreedInfo] = []
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         catBreedList.dataSource = self
         Task {
-            // No more empty lists due to errors!!!
             do {
                 let breedsData = try retrieveCatBreeds()
                 
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
                 catBreedList.reloadData()
             } catch {
-                let alert = UIAlertController(title: "Error!",
-                                              message: "An error ocurred while getting cat breeds. Please contact suport!",
-                                              preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Click", 
-                                              style: UIAlertAction.Style.default,
-                                              handler: nil))
-                self.present(alert,
-                             animated: true,
-                             completion: nil)
+                showErrorAlert()
             }
         }
+    }
+    
+    func showErrorAlert() {
+        let alert = UIAlertController(title: "Error!",
+                                      message: "An error ocurred while getting cat breeds. Please contact suport!",
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Click",
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
     }
     
     func retrieveCatBreeds() throws -> [CatBreed] {
