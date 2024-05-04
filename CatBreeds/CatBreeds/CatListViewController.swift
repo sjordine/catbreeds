@@ -14,17 +14,21 @@ class CatListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Task {
-            // Do any additional setup after loading the view.
-            if let url = URL(string: "https://catfact.ninja/breeds") {
-                do {
-                    let (data, response) = try await URLSession.shared.data(from: url)
-                } catch {
-                    print(error)
+            if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
+                var breeds = []
+                
+                let data = try Data(contentsOf: file)
+                breeds = try JSONDecoder().decode(Array<CatBreed>.self,
+                                                      from: data)
+                
+                
+                if !breeds.isEmpty {
+                    print(breeds)
                 }
             }
         }
     }
-
-
+    
+    
 }
 
