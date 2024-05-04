@@ -16,7 +16,11 @@ class CatListViewController: UIViewController {
         Task {
             // Do any additional setup after loading the view.
             if let url = URL(string: "https://catfact.ninja/breeds") {
-                let (data, response) = try await URLSession.shared.data(from: url)
+                do {
+                    let (data, response) = try await URLSession.shared.data(from: url)
+                } catch {
+                    print(error)
+                }
             }
         }
     }
