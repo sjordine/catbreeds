@@ -15,7 +15,18 @@
 		768CA32B2BE65CA000BF5116 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 768CA32A2BE65CA000BF5116 /* Base */; };
 		768CA3332BE661BF00BF5116 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3322BE661BF00BF5116 /* CatBreed.swift */; };
 		768CA3372BE663E200BF5116 /* CatBreeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 768CA3362BE662EC00BF5116 /* CatBreeds.json */; };
+		768CA33F2BE6654B00BF5116 /* CatBreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA33E2BE6654B00BF5116 /* CatBreedsTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		768CA3402BE6654B00BF5116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 768CA3132BE65C9D00BF5116 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 768CA31A2BE65C9D00BF5116;
+			remoteInfo = CatBreeds;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		768CA31B2BE65C9D00BF5116 /* CatBreeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatBreeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +39,19 @@
 		768CA32C2BE65CA000BF5116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		768CA3322BE661BF00BF5116 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
 		768CA3362BE662EC00BF5116 /* CatBreeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CatBreeds.json; sourceTree = "<group>"; };
+		768CA33C2BE6654B00BF5116 /* CatBreedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBreedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		768CA33E2BE6654B00BF5116 /* CatBreedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		768CA3182BE65C9D00BF5116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		768CA3392BE6654B00BF5116 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				768CA31D2BE65C9D00BF5116 /* CatBreeds */,
+				768CA33D2BE6654B00BF5116 /* CatBreedsTests */,
 				768CA31C2BE65C9D00BF5116 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				768CA31B2BE65C9D00BF5116 /* CatBreeds.app */,
+				768CA33C2BE6654B00BF5116 /* CatBreedsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +93,14 @@
 				768CA3362BE662EC00BF5116 /* CatBreeds.json */,
 			);
 			path = CatBreeds;
+			sourceTree = "<group>";
+		};
+		768CA33D2BE6654B00BF5116 /* CatBreedsTests */ = {
+			isa = PBXGroup;
+			children = (
+				768CA33E2BE6654B00BF5116 /* CatBreedsTests.swift */,
+			);
+			path = CatBreedsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +123,24 @@
 			productReference = 768CA31B2BE65C9D00BF5116 /* CatBreeds.app */;
 			productType = "com.apple.product-type.application";
 		};
+		768CA33B2BE6654B00BF5116 /* CatBreedsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 768CA3422BE6654B00BF5116 /* Build configuration list for PBXNativeTarget "CatBreedsTests" */;
+			buildPhases = (
+				768CA3382BE6654B00BF5116 /* Sources */,
+				768CA3392BE6654B00BF5116 /* Frameworks */,
+				768CA33A2BE6654B00BF5116 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				768CA3412BE6654B00BF5116 /* PBXTargetDependency */,
+			);
+			name = CatBreedsTests;
+			productName = CatBreedsTests;
+			productReference = 768CA33C2BE6654B00BF5116 /* CatBreedsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -105,6 +153,10 @@
 				TargetAttributes = {
 					768CA31A2BE65C9D00BF5116 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					768CA33B2BE6654B00BF5116 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 768CA31A2BE65C9D00BF5116;
 					};
 				};
 			};
@@ -122,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				768CA31A2BE65C9D00BF5116 /* CatBreeds */,
+				768CA33B2BE6654B00BF5116 /* CatBreedsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +188,13 @@
 				768CA3282BE65CA000BF5116 /* Assets.xcassets in Resources */,
 				768CA32B2BE65CA000BF5116 /* Base in Resources */,
 				768CA3262BE65C9D00BF5116 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		768CA33A2BE6654B00BF5116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +212,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		768CA3382BE6654B00BF5116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768CA33F2BE6654B00BF5116 /* CatBreedsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		768CA3412BE6654B00BF5116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 768CA31A2BE65C9D00BF5116 /* CatBreeds */;
+			targetProxy = 768CA3402BE6654B00BF5116 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		768CA3242BE65C9D00BF5116 /* Main.storyboard */ = {
@@ -349,6 +425,42 @@
 			};
 			name = Release;
 		};
+		768CA3432BE6654B00BF5116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6J4M45K4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.CatBreedsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatBreeds.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CatBreeds";
+			};
+			name = Debug;
+		};
+		768CA3442BE6654B00BF5116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6J4M45K4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.CatBreedsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatBreeds.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CatBreeds";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -366,6 +478,15 @@
 			buildConfigurations = (
 				768CA3302BE65CA000BF5116 /* Debug */,
 				768CA3312BE65CA000BF5116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		768CA3422BE6654B00BF5116 /* Build configuration list for PBXNativeTarget "CatBreedsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				768CA3432BE6654B00BF5116 /* Debug */,
+				768CA3442BE6654B00BF5116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
