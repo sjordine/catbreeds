@@ -14,21 +14,12 @@ struct CatServices {
     
     func retrieveCatBreeds() throws -> [CatBreedDetail] {
         
-        let data = try catBreedDatabase.retrieveCatBreedsData()
-        let breedList = try catBreedDatabase.parseBreedData(from: data)
-        
-        // 3 - Additional computation to make data fits our (business) needs
+        let breedList = try catBreedDatabase.retrieveCatBreeds()
         let processedList = adjustBreedCountries(from:breedList)
         
         return processedList
     }
-    
 
-    
-
-    
-    
-    
     private func adjustBreedCountries(from breedList: [CatBreed]) -> [CatBreedDetail] {
         breedList.map { breedData in
             adjustCountryName(breedData)

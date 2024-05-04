@@ -9,7 +9,14 @@ import Foundation
 
 struct CatFileDataAcess {
     
-    func retrieveCatBreedsData() throws -> Data {
+    func retrieveCatBreeds() throws -> [CatBreed] {
+        let data = try retrieveCatBreedsData()
+        let breedList = try parseBreedData(from: data)
+        
+        return breedList
+    }
+    
+    private func retrieveCatBreedsData() throws -> Data {
         if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: file)
@@ -22,7 +29,7 @@ struct CatFileDataAcess {
         }
     }
     
-    func parseBreedData(from data: Data) throws -> [CatBreed] {
+    private func parseBreedData(from data: Data) throws -> [CatBreed] {
         do {
             let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
                                                       from: data)
@@ -31,6 +38,5 @@ struct CatFileDataAcess {
             throw CatBreedFileError.invalidData
         }
     }
-    
     
 }
