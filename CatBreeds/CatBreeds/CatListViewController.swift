@@ -17,31 +17,43 @@ class CatListViewController: UIViewController {
         super.viewDidLoad()
         catBreedList.dataSource = self
         Task {
-            if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
+            
+            let breedsData = retrieveCatBreeds()
 
+            if !breedsData.isEmpty {
+                breeds = breedsData.map { catBreed in
+                    var iconName = ""
+                    switch catBreed.coat {
+                    case "Short":
+                        iconName = "shortIcon"
+                    case "Long":
+                        iconName = "longIcon"
+                    case "Hairless/Furry down":
+                        iconName = "hairlessIcon"
+                    default:
+                        iconName = ""
+                    }
+                    return CatBreedInfo(breed: catBreed.breed,
+                                        coatIcon: iconName)
+                }
+                catBreedList.reloadData()
+            }
+        }
+    }
+    
+    func retrieveCatBreeds() -> [CatBreed] {
+        if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
+            do {
                 let data = try Data(contentsOf: file)
                 let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
-                                                      from: data)
-
-                if !breedsData.isEmpty {
-                    breeds = breedsData.map { catBreed in
-                        var iconName = ""
-                        switch catBreed.coat {
-                        case "Short":
-                            iconName = "shortIcon"
-                        case "Long":
-                            iconName = "longIcon"
-                        case "Hairless/Furry down":
-                            iconName = "hairlessIcon"
-                        default:
-                            iconName = ""
-                        }
-                        return CatBreedInfo(breed: catBreed.breed,
-                                            coatIcon: iconName)
-                    }
-                    catBreedList.reloadData()
-                }
+                                                          from: data)
+                return breedsData
+            } catch {
+                print("Não consegui obter dados")
+                return []
             }
+        } else {
+            return []
         }
     }
     
@@ -54,7 +66,8 @@ extension CatListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CatBreedCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CatBreedCell",
+                                                 for: indexPath)
         
         let currentBreed = breeds[indexPath.row]
         
