@@ -30,7 +30,15 @@ class CatListViewController: UIViewController {
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
                 catBreedList.reloadData()
             } catch {
-                print("Ops!")
+                let alert = UIAlertController(title: "Error!",
+                                              message: "An error ocurred while getting cat breeds. Please contact suport!",
+                                              preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Click", 
+                                              style: UIAlertAction.Style.default,
+                                              handler: nil))
+                self.present(alert,
+                             animated: true,
+                             completion: nil)
             }
         }
     }
