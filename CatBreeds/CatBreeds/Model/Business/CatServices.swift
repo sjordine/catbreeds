@@ -10,7 +10,7 @@ import Foundation
 struct CatServices {
     
     var countryDatabase = CountryDataBase.shared
-    var catBreedDatabase = CatFileDataAcess()
+    var catBreedDatabase = CatFileDataAccess()
     
     func retrieveCatBreeds() throws -> [CatBreedDetail] {
         

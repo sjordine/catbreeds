@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CatFileDataAcess {
+struct CatFileDataAccess {
     
     func retrieveCatBreeds() throws -> [CatBreed] {
         let data = try retrieveCatBreedsData()
