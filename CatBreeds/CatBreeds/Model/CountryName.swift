@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct CountryName: Codable {
+    var common: String
+
+}

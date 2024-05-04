@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct CatBreedDetail: Codable {
+    var breed: String
+    var country: String
+    var countryCode:String
+    var origin: String
+    var coat: String
+    var pattern: String
+}

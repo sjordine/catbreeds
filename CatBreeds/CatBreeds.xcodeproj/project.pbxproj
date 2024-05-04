@@ -21,6 +21,11 @@
 		768CA34A2BE67DDB00BF5116 /* CatBreedPresentationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3492BE67DDB00BF5116 /* CatBreedPresentationTest.swift */; };
 		768CA3512BE69F4E00BF5116 /* CatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3502BE69F4E00BF5116 /* CatServices.swift */; };
 		768CA3532BE69FFC00BF5116 /* CatBreedFileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3522BE69FFC00BF5116 /* CatBreedFileError.swift */; };
+		768CA3552BE6B14E00BF5116 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 768CA3542BE6B14E00BF5116 /* Countries.json */; };
+		768CA3572BE6B17D00BF5116 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3562BE6B17D00BF5116 /* Country.swift */; };
+		768CA3592BE6B19200BF5116 /* CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3582BE6B19200BF5116 /* CountryName.swift */; };
+		768CA35B2BE6B1D000BF5116 /* CountryDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA35A2BE6B1D000BF5116 /* CountryDataBase.swift */; };
+		768CA35D2BE6B47D00BF5116 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA35C2BE6B47D00BF5116 /* CatBreedDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		768CA3492BE67DDB00BF5116 /* CatBreedPresentationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedPresentationTest.swift; sourceTree = "<group>"; };
 		768CA3502BE69F4E00BF5116 /* CatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatServices.swift; sourceTree = "<group>"; };
 		768CA3522BE69FFC00BF5116 /* CatBreedFileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedFileError.swift; sourceTree = "<group>"; };
+		768CA3542BE6B14E00BF5116 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
+		768CA3562BE6B17D00BF5116 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		768CA3582BE6B19200BF5116 /* CountryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryName.swift; sourceTree = "<group>"; };
+		768CA35A2BE6B1D000BF5116 /* CountryDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataBase.swift; sourceTree = "<group>"; };
+		768CA35C2BE6B47D00BF5116 /* CatBreedDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,10 @@
 				768CA3322BE661BF00BF5116 /* CatBreed.swift */,
 				768CA3502BE69F4E00BF5116 /* CatServices.swift */,
 				768CA3522BE69FFC00BF5116 /* CatBreedFileError.swift */,
+				768CA3562BE6B17D00BF5116 /* Country.swift */,
+				768CA3582BE6B19200BF5116 /* CountryName.swift */,
+				768CA35A2BE6B1D000BF5116 /* CountryDataBase.swift */,
+				768CA35C2BE6B47D00BF5116 /* CatBreedDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				768CA3272BE65CA000BF5116 /* Assets.xcassets */,
+				768CA3542BE6B14E00BF5116 /* Countries.json */,
 				768CA3362BE662EC00BF5116 /* CatBreeds.json */,
 			);
 			path = Resources;
@@ -242,6 +257,7 @@
 				768CA3372BE663E200BF5116 /* CatBreeds.json in Resources */,
 				768CA3282BE65CA000BF5116 /* Assets.xcassets in Resources */,
 				768CA32B2BE65CA000BF5116 /* Base in Resources */,
+				768CA3552BE6B14E00BF5116 /* Countries.json in Resources */,
 				768CA3262BE65C9D00BF5116 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				768CA3232BE65C9D00BF5116 /* CatListViewController.swift in Sources */,
+				768CA3572BE6B17D00BF5116 /* Country.swift in Sources */,
+				768CA35B2BE6B1D000BF5116 /* CountryDataBase.swift in Sources */,
 				768CA3512BE69F4E00BF5116 /* CatServices.swift in Sources */,
+				768CA3592BE6B19200BF5116 /* CountryName.swift in Sources */,
 				768CA31F2BE65C9D00BF5116 /* AppDelegate.swift in Sources */,
 				768CA3212BE65C9D00BF5116 /* SceneDelegate.swift in Sources */,
 				768CA3482BE6747500BF5116 /* CatBreedInfo.swift in Sources */,
+				768CA35D2BE6B47D00BF5116 /* CatBreedDetail.swift in Sources */,
 				768CA3332BE661BF00BF5116 /* CatBreed.swift in Sources */,
 				768CA3532BE69FFC00BF5116 /* CatBreedFileError.swift in Sources */,
 				768CA3462BE66AD100BF5116 /* CatBreedTableViewCell.swift in Sources */,

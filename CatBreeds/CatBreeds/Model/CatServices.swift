@@ -9,7 +9,9 @@ import Foundation
 
 struct CatServices {
     
-    func retrieveCatBreeds() throws -> [CatBreed] {
+    var countryDatabase = CountryDataBase.shared
+    
+    func retrieveCatBreeds() throws -> [CatBreedDetail] {
         let data = try retrieveCatBreedsData()
         let breedList = try parseBreedData(from: data)
         let processedList = adjustBreedCountries(from:breedList)
@@ -42,14 +44,14 @@ struct CatServices {
     
     
     
-    private func adjustBreedCountries(from breedList: [CatBreed]) -> [CatBreed] {
+    private func adjustBreedCountries(from breedList: [CatBreed]) -> [CatBreedDetail] {
         breedList.map { breedData in
             adjustCountryName(breedData)
             
         }
     }
     
-    private func adjustCountryName(_ breedData: CatBreed) -> CatBreed {
+    private func adjustCountryName(_ breedData: CatBreed) -> CatBreedDetail {
         let searchDevelopedCountry = /developed in (the )*(?<developedCountry>.+?) \(./
         
         var countryName = breedData.country
@@ -59,12 +61,14 @@ struct CatServices {
             countryName = String(result.developedCountry)
         }
         
+        let countryCode = countryDatabase.country(by: countryName)
         
-        return CatBreed(breed: breedData.breed,
-                        country: countryName,
-                        origin: breedData.origin,
-                        coat: breedData.coat,
-                        pattern: breedData.pattern)
+        return CatBreedDetail(breed: breedData.breed,
+                              country: countryName,
+                              countryCode: countryCode?.cca2 ?? "",
+                              origin: breedData.origin,
+                              coat: breedData.coat,
+                              pattern: breedData.pattern)
     }
     
 }

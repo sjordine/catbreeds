@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Country: Codable {
+    var name:CountryName
+    var cca2: String
+}

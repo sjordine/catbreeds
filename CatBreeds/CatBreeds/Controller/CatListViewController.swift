@@ -42,7 +42,7 @@ class CatListViewController: UIViewController {
                      completion: nil)
     }
     
-    func prepareBreedsToPresent(breedsData: [CatBreed]) -> [CatBreedInfo] {
+    func prepareBreedsToPresent(breedsData: [CatBreedDetail]) -> [CatBreedInfo] {
         breedsData.map { catBreed in
             let iconName = coatIcon(from: catBreed.coat)
             return CatBreedInfo(breed: catBreed.breed, 
