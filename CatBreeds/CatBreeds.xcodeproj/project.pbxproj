@@ -16,6 +16,7 @@
 		768CA3332BE661BF00BF5116 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3322BE661BF00BF5116 /* CatBreed.swift */; };
 		768CA3372BE663E200BF5116 /* CatBreeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 768CA3362BE662EC00BF5116 /* CatBreeds.json */; };
 		768CA33F2BE6654B00BF5116 /* CatBreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA33E2BE6654B00BF5116 /* CatBreedsTests.swift */; };
+		768CA3462BE66AD100BF5116 /* CatBreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3452BE66AD100BF5116 /* CatBreedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		768CA3362BE662EC00BF5116 /* CatBreeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CatBreeds.json; sourceTree = "<group>"; };
 		768CA33C2BE6654B00BF5116 /* CatBreedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBreedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		768CA33E2BE6654B00BF5116 /* CatBreedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsTests.swift; sourceTree = "<group>"; };
+		768CA3452BE66AD100BF5116 /* CatBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				768CA32C2BE65CA000BF5116 /* Info.plist */,
 				768CA3322BE661BF00BF5116 /* CatBreed.swift */,
 				768CA3362BE662EC00BF5116 /* CatBreeds.json */,
+				768CA3452BE66AD100BF5116 /* CatBreedTableViewCell.swift */,
 			);
 			path = CatBreeds;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				768CA31F2BE65C9D00BF5116 /* AppDelegate.swift in Sources */,
 				768CA3212BE65C9D00BF5116 /* SceneDelegate.swift in Sources */,
 				768CA3332BE661BF00BF5116 /* CatBreed.swift in Sources */,
+				768CA3462BE66AD100BF5116 /* CatBreedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
