@@ -27,20 +27,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="70.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="TNy-On-ILD">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TNy-On-ILD">
                                                     <rect key="frame" x="70" y="10.000000000000004" width="313" height="50.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Breed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGM-K4-lMr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="21.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="21"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUQ-e0-L7M">
-                                                            <rect key="frame" x="0.0" y="28.333333333333336" width="107.66666666666667" height="22"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cUQ-e0-L7M">
+                                                            <rect key="frame" x="0.0" y="29" width="148" height="21.333333333333329"/>
                                                             <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EE-HH-vzD">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32.333333333333336" height="21.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwP-HF-MKP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="22"/>
+                                                                    <rect key="frame" x="40.333333333333321" y="0.0" width="107.66666666666669" height="21.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -72,6 +78,7 @@
                                         <connections>
                                             <outlet property="breedName" destination="eGM-K4-lMr" id="Wsf-ss-lNQ"/>
                                             <outlet property="coatIcon" destination="H48-Wg-LRk" id="XRK-8U-dYO"/>
+                                            <outlet property="countryFlag" destination="2EE-HH-vzD" id="LQh-g0-khR"/>
                                             <outlet property="countryName" destination="FwP-HF-MKP" id="lt6-6i-yqt"/>
                                         </connections>
                                     </tableViewCell>

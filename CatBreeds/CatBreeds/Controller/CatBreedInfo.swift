@@ -11,4 +11,5 @@ struct CatBreedInfo {
     var breed: String
     var countryName: String
     var coatIcon: String
+    var flag:String
 }

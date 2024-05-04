@@ -45,9 +45,11 @@ class CatListViewController: UIViewController {
     func prepareBreedsToPresent(breedsData: [CatBreedDetail]) -> [CatBreedInfo] {
         breedsData.map { catBreed in
             let iconName = coatIcon(from: catBreed.coat)
-            return CatBreedInfo(breed: catBreed.breed, 
+            let flag = flag(country: catBreed.countryCode)
+            return CatBreedInfo(breed: catBreed.breed,
                                 countryName: catBreed.country,
-                                coatIcon: iconName)
+                                coatIcon: iconName,
+                                flag: flag)
         }
     }
     
@@ -62,6 +64,15 @@ class CatListViewController: UIViewController {
         default:
             return ""
         }
+    }
+    
+    func flag(country:String) -> String {
+        let base : UInt32 = 127397
+        var s = ""
+        for v in country.unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return String(s)
     }
     
 }
@@ -83,6 +94,7 @@ extension CatListViewController: UITableViewDataSource {
             
             cell.breedName.text = currentBreed.breed
             cell.countryName.text = currentBreed.countryName
+            cell.countryFlag.text = currentBreed.flag
             cell.coatIcon.image = UIImage(named: currentBreed.coatIcon)
   
         }

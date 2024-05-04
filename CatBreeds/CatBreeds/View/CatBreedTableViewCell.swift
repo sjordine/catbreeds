@@ -13,6 +13,7 @@ class CatBreedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var breedName: UILabel!
     
+    @IBOutlet weak var countryFlag: UILabel!
     @IBOutlet weak var countryName: UILabel!
     
     override func awakeFromNib() {
