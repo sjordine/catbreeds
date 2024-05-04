@@ -11,7 +11,7 @@ class CatListViewController: UIViewController {
     
     @IBOutlet weak var catBreedList: UITableView!
     
-    var breeds:[CatBreed] = []
+    var breeds:[CatBreedInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +20,25 @@ class CatListViewController: UIViewController {
             if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
 
                 let data = try Data(contentsOf: file)
-                breeds = try JSONDecoder().decode(Array<CatBreed>.self,
+                let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
                                                       from: data)
 
-                if !breeds.isEmpty {
+                if !breedsData.isEmpty {
+                    breeds = breedsData.map { catBreed in
+                        var iconName = ""
+                        switch catBreed.coat {
+                        case "Short":
+                            iconName = "shortIcon"
+                        case "Long":
+                            iconName = "longIcon"
+                        case "Hairless/Furry down":
+                            iconName = "hairlessIcon"
+                        default:
+                            iconName = ""
+                        }
+                        return CatBreedInfo(breed: catBreed.breed,
+                                            coatIcon: iconName)
+                    }
                     catBreedList.reloadData()
                 }
             }
@@ -47,16 +62,7 @@ extension CatListViewController: UITableViewDataSource {
             
             cell.breedName.text = currentBreed.breed
             
-            switch currentBreed.coat {
-            case "Short":
-                cell.coatIcon.image = UIImage(named: "shortIcon")
-            case "Long":
-                cell.coatIcon.image = UIImage(named: "longIcon")
-            case "Hairless/Furry down":
-                cell.coatIcon.image = UIImage(named: "hairlessIcon")
-            default:
-                cell.coatIcon.image = nil
-            }
+            cell.coatIcon.image = UIImage(named: currentBreed.coatIcon)
             
             
         }
