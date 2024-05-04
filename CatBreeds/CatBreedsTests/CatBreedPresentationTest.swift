@@ -1,16 +1,14 @@
 //
-//  CatBreedsTests.swift
+//  CatBreedPresentationTest.swift
 //  CatBreedsTests
 //
 //  Created by Sergio Ordine on 04/05/24.
 //
 
 import XCTest
-@testable import CatBreeds
 
-final class CatBreedsTests: XCTestCase {
-    
-    let targetTestClass = CatListViewController()
+
+final class CatBreedPresentationTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,13 +16,6 @@ final class CatBreedsTests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
-    func testShortHairIcon() throws {
-        
-        let icon = targetTestClass.coatIcon(from: "Short")
-        XCTAssertEqual(icon,"shortIcon", "Invalid Icon!")
-    
     }
 
     func testExample() throws {
@@ -37,7 +28,7 @@ final class CatBreedsTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

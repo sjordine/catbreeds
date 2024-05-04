@@ -12,9 +12,7 @@ class CatListViewController: UIViewController {
     @IBOutlet weak var catBreedList: UITableView!
     
     var breeds:[CatBreedInfo] = []
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         catBreedList.dataSource = self
