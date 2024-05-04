@@ -52,12 +52,12 @@ class CatListViewController: UIViewController {
     }
     
     func coatIcon(from coatName: String) -> String {
-        switch coatName {
-        case "Short":
+        switch coatName.lowercased() {
+        case "short":
             return "shortIcon"
-        case "Long":
+        case "long":
             return "longIcon"
-        case "Hairless/Furry down":
+        case "hairless/furry down":
             return "hairlessIcon"
         default:
             return ""
