@@ -10,40 +10,22 @@ import Foundation
 struct CatServices {
     
     var countryDatabase = CountryDataBase.shared
+    var catBreedDatabase = CatFileDataAcess()
     
     func retrieveCatBreeds() throws -> [CatBreedDetail] {
-        // 1 - Retrieve data from an external source
-        let data = try retrieveCatBreedsData()
-        // 2 - Process it to json
-        let breedList = try parseBreedData(from: data)
+        
+        let data = try catBreedDatabase.retrieveCatBreedsData()
+        let breedList = try catBreedDatabase.parseBreedData(from: data)
+        
         // 3 - Additional computation to make data fits our (business) needs
         let processedList = adjustBreedCountries(from:breedList)
         
         return processedList
     }
     
-    private func retrieveCatBreedsData() throws -> Data {
-        if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: file)
-                return data
-            } catch {
-                throw CatBreedFileError.unableToReadFile
-            }
-        } else {
-            throw CatBreedFileError.noBreedFile
-        }
-    }
+
     
-    private func parseBreedData(from data: Data) throws -> [CatBreed] {
-        do {
-            let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
-                                                      from: data)
-            return breedsData
-        } catch {
-            throw CatBreedFileError.invalidData
-        }
-    }
+
     
     
     
