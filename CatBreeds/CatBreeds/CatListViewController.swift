@@ -47,19 +47,22 @@ class CatListViewController: UIViewController {
     
     func prepareBreedsToPresent(breedsData: [CatBreed]) -> [CatBreedInfo] {
         breedsData.map { catBreed in
-            var iconName = ""
-            switch catBreed.coat {
-            case "Short":
-                iconName = "shortIcon"
-            case "Long":
-                iconName = "longIcon"
-            case "Hairless/Furry down":
-                iconName = "hairlessIcon"
-            default:
-                iconName = ""
-            }
+            let iconName = coatIcon(from: catBreed.coat)
             return CatBreedInfo(breed: catBreed.breed,
                                 coatIcon: iconName)
+        }
+    }
+    
+    func coatIcon(from coatName: String) -> String {
+        switch coatName {
+        case "Short":
+            return "shortIcon"
+        case "Long":
+            return "longIcon"
+        case "Hairless/Furry down":
+            return "hairlessIcon"
+        default:
+            return ""
         }
     }
     
