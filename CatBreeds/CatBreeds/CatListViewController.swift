@@ -26,11 +26,14 @@ class CatListViewController: UIViewController {
         catBreedList.dataSource = self
         Task {
             do {
+                // 1 - Retrieve data fro an external source
                 let breedsData = try retrieveCatBreeds()
-                
+                // 2 - Prepare data for presenting
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
+                // 3 - Present data
                 catBreedList.reloadData()
             } catch {
+                // 4 - Present error, if any
                 showErrorAlert()
             }
         }
