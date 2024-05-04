@@ -12,14 +12,14 @@ class CatListViewController: UIViewController {
     @IBOutlet weak var catBreedList: UITableView!
     
     var breeds:[CatBreedInfo] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         catBreedList.dataSource = self
         Task {
             
             let breedsData = retrieveCatBreeds()
-
+            
             if !breedsData.isEmpty {
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
                 catBreedList.reloadData()
@@ -28,17 +28,32 @@ class CatListViewController: UIViewController {
     }
     
     func retrieveCatBreeds() -> [CatBreed] {
+        if let data = retrieveCatBreedsData() {
+            return parseBreedData(from: data)
+        } else {
+            return []
+        }
+    }
+    
+    func retrieveCatBreedsData() -> Data? {
         if let file = Bundle.main.url(forResource: "CatBreeds", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: file)
-                let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
-                                                          from: data)
-                return breedsData
+                return data
             } catch {
-                print("Não consegui obter dados")
-                return []
+                return nil
             }
         } else {
+            return nil
+        }
+    }
+    
+    func parseBreedData(from data: Data) -> [CatBreed] {
+        do {
+            let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
+                                                      from: data)
+            return breedsData
+        } catch {
             return []
         }
     }
@@ -66,6 +81,7 @@ class CatListViewController: UIViewController {
     
 }
 
+
 extension CatListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -92,4 +108,5 @@ extension CatListViewController: UITableViewDataSource {
     
     
 }
+
 
