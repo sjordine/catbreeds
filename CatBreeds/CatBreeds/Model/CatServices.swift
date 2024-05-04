@@ -11,7 +11,20 @@ struct CatServices {
     
     func retrieveCatBreeds() throws -> [CatBreed] {
         let data = try retrieveCatBreedsData()
-        return try parseBreedData(from: data)
+        let breedList = try parseBreedData(from: data)
+        let processedList = breedList.map { breedData in
+            if breedData.country.contains("developed in") {
+                return CatBreed(breed: breedData.breed,
+                                country: "TO BE DEFINED",
+                                origin: breedData.origin,
+                                coat: breedData.coat,
+                                pattern: breedData.pattern)
+            } else {
+                return breedData
+            }
+        }
+        
+        return processedList
     }
     
     private func retrieveCatBreedsData() throws -> Data {
