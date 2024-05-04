@@ -23,12 +23,14 @@ class CatListViewController: UIViewController {
         super.viewDidLoad()
         catBreedList.dataSource = self
         Task {
-            //1 - Could return as an empty list! Why?
-            let breedsData = try retrieveCatBreeds()
-            
-            if !breedsData.isEmpty {
+            // No more empty lists due to errors!!!
+            do {
+                let breedsData = try retrieveCatBreeds()
+                
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
                 catBreedList.reloadData()
+            } catch {
+                print("Ops!")
             }
         }
     }
