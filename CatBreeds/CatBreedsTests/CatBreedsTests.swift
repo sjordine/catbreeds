@@ -24,7 +24,9 @@ final class CatBreedsTests: XCTestCase {
         
         let icon = targetTestClass.coatIcon(from: "Short")
         XCTAssertEqual(icon,"shortIcon", "Invalid Icon!")
-    
+        
+        let iconSmallCaps = targetTestClass.coatIcon(from: "short")
+        XCTAssertEqual(iconSmallCaps,"shortIcon", "Invalid Icon!")
     }
 
     func testExample() throws {
