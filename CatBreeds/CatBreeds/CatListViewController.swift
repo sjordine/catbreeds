@@ -41,6 +41,14 @@ extension CatListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CatBreedCell", for: indexPath)
         
+        let currentBreed = breeds[indexPath.row]
+        
+        if let cell = cell as? CatBreedTableViewCell {
+            
+            cell.breedName.text = currentBreed.breed
+            
+        }
+        
         return cell
     }
     
