@@ -29,6 +29,7 @@
 		768CA3632BE6B79E00BF5116 /* CatFileDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3622BE6B79E00BF5116 /* CatFileDataAccess.swift */; };
 		768CA3652BE6BA0100BF5116 /* CatAPIDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3642BE6BA0100BF5116 /* CatAPIDataAccess.swift */; };
 		768CA3672BE7231900BF5116 /* CatAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3662BE7231900BF5116 /* CatAPIError.swift */; };
+		768CA3692BE7242300BF5116 /* CatAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3682BE7242300BF5116 /* CatAPIData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		768CA3622BE6B79E00BF5116 /* CatFileDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFileDataAccess.swift; sourceTree = "<group>"; };
 		768CA3642BE6BA0100BF5116 /* CatAPIDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIDataAccess.swift; sourceTree = "<group>"; };
 		768CA3662BE7231900BF5116 /* CatAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIError.swift; sourceTree = "<group>"; };
+		768CA3682BE7242300BF5116 /* CatAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				768CA3622BE6B79E00BF5116 /* CatFileDataAccess.swift */,
 				768CA3642BE6BA0100BF5116 /* CatAPIDataAccess.swift */,
 				768CA3662BE7231900BF5116 /* CatAPIError.swift */,
+				768CA3682BE7242300BF5116 /* CatAPIData.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				768CA3512BE69F4E00BF5116 /* CatServices.swift in Sources */,
 				768CA3592BE6B19200BF5116 /* CountryName.swift in Sources */,
 				768CA3632BE6B79E00BF5116 /* CatFileDataAccess.swift in Sources */,
+				768CA3692BE7242300BF5116 /* CatAPIData.swift in Sources */,
 				768CA31F2BE65C9D00BF5116 /* AppDelegate.swift in Sources */,
 				768CA3212BE65C9D00BF5116 /* SceneDelegate.swift in Sources */,
 				768CA3482BE6747500BF5116 /* CatBreedInfo.swift in Sources */,

@@ -17,9 +17,10 @@ class CatListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         catBreedList.dataSource = self
+        catBreedList.delegate = self
         Task {
             do {
-                let breedsData = try catServices.retrieveCatBreeds()
+                let breedsData = try await catServices.retrieveCatBreeds()
 
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
                 catBreedList.reloadData()
@@ -102,6 +103,14 @@ extension CatListViewController: UITableViewDataSource {
         return cell
     }
     
+    
+}
+
+extension CatListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
 }
 

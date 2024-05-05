@@ -36,9 +36,9 @@ struct CatAPIDataAccess {
     
     private func parseBreedData(from data: Data) throws -> [CatBreed] {
         do {
-            let breedsData = try JSONDecoder().decode(Array<CatBreed>.self,
+            let breedsData = try JSONDecoder().decode(CatAPIData.self,
                                                       from: data)
-            return breedsData
+            return breedsData.data
         } catch {
             throw CatAPIError.invalidData
         }
