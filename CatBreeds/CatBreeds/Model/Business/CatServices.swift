@@ -10,12 +10,12 @@ import Foundation
 struct CatServices {
     
     var countryDatabase = CountryDataBase.shared
-   // var catBreedDatabase = CatFileDataAccess()
-    var catBreedDatabase = CatAPIDataAccess()
+
+    var catBreedDatabase: CatDatabase = CatAPIDataAccess()
     
     func retrieveCatBreeds() async throws -> [CatBreedDetail] {
         
-        let breedList = await try catBreedDatabase.retrieveCatBreeds()
+        let breedList = try await catBreedDatabase.retrieveCatBreeds()
         let processedList = adjustBreedCountries(from:breedList)
         
         return processedList

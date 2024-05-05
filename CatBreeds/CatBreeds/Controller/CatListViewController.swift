@@ -97,7 +97,7 @@ extension CatListViewController: UITableViewDataSource {
             cell.countryName.text = currentBreed.countryName
             cell.countryFlag.text = currentBreed.flag
             cell.coatIcon.image = UIImage(named: currentBreed.coatIcon)
-  
+            cell.layoutIfNeeded()
         }
         
         return cell

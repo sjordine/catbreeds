@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CatAPIDataAccess {
+struct CatAPIDataAccess: CatDatabase {
     
     func retrieveCatBreeds() async throws -> [CatBreed] {
         let data = try await retrieveCatBreedsData()
