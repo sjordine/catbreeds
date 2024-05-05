@@ -9,7 +9,7 @@ import Foundation
 
 struct CatFileDataAccess: CatDatabase {
     
-    func retrieveCatBreeds() async throws -> [CatBreed] {
+    func retrieveCatBreeds()  throws -> [CatBreed] {
         let data = try retrieveCatBreedsData()
         let breedList = try parseBreedData(from: data)
         
