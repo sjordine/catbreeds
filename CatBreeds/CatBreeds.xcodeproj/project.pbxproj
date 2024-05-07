@@ -32,6 +32,8 @@
 		768CA36D2BE7CA0A00BF5116 /* CatBreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA36C2BE7CA0A00BF5116 /* CatBreedsTests.swift */; };
 		768CA36F2BE7CA4C00BF5116 /* CatServicesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA36E2BE7CA4C00BF5116 /* CatServicesTest.swift */; };
 		768CA3722BE7CA9C00BF5116 /* CatCountryDatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3702BE7CA9000BF5116 /* CatCountryDatabaseMock.swift */; };
+		768CA3742BEAA40800BF5116 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3732BEAA40800BF5116 /* CatListView.swift */; };
+		768CA3762BEAA47800BF5116 /* CatListViewCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3752BEAA47800BF5116 /* CatListViewCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		768CA36C2BE7CA0A00BF5116 /* CatBreedsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatBreedsTests.swift; sourceTree = "<group>"; };
 		768CA36E2BE7CA4C00BF5116 /* CatServicesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatServicesTest.swift; sourceTree = "<group>"; };
 		768CA3702BE7CA9000BF5116 /* CatCountryDatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCountryDatabaseMock.swift; sourceTree = "<group>"; };
+		768CA3732BEAA40800BF5116 /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
+		768CA3752BEAA47800BF5116 /* CatListViewCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 				768CA3292BE65CA000BF5116 /* LaunchScreen.storyboard */,
 				768CA3242BE65C9D00BF5116 /* Main.storyboard */,
 				768CA3452BE66AD100BF5116 /* CatBreedTableViewCell.swift */,
+				768CA3732BEAA40800BF5116 /* CatListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				768CA3472BE6747500BF5116 /* CatBreedInfo.swift */,
 				768CA3222BE65C9D00BF5116 /* CatListViewController.swift */,
+				768CA3752BEAA47800BF5116 /* CatListViewCodeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +331,8 @@
 				768CA3512BE69F4E00BF5116 /* CatServices.swift in Sources */,
 				768CA3592BE6B19200BF5116 /* CountryName.swift in Sources */,
 				768CA3632BE6B79E00BF5116 /* CatFileDataAccess.swift in Sources */,
+				768CA3742BEAA40800BF5116 /* CatListView.swift in Sources */,
+				768CA3762BEAA47800BF5116 /* CatListViewCodeViewController.swift in Sources */,
 				768CA3692BE7242300BF5116 /* CatAPIData.swift in Sources */,
 				768CA31F2BE65C9D00BF5116 /* AppDelegate.swift in Sources */,
 				768CA36B2BE7261200BF5116 /* CatDatabase.swift in Sources */,
