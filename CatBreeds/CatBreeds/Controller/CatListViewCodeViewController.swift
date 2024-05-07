@@ -34,8 +34,12 @@ class CatListViewCodeViewController: UIViewController {
                 let breedsData = try await catServices.retrieveCatBreeds()
 
                 let breeds = prepareBreedsToPresent(breedsData: breedsData)
-                catListView.update(breeds:breeds)
-                
+
+                let notificationCenter = NotificationCenter.default
+                notificationCenter.post(name: NSNotification.Name("UpdateBreedList"),
+                                        object: nil,
+                                        userInfo: ["breeds":breeds])
+                 
                 
             } catch {
                 // 4 - Present error, if any
