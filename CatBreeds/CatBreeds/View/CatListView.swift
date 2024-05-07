@@ -9,6 +9,8 @@ import UIKit
 
 class CatListView: UIView {
     
+    var breeds: [CatBreedInfo] = []
+    
     private lazy var breedList: UITableView = {
         return UITableView()
     }()
@@ -26,7 +28,7 @@ class CatListView: UIView {
     }
     
     func setup() {
-
+        
     }
     
     private func setupView() {
@@ -36,6 +38,7 @@ class CatListView: UIView {
     
     private func setupSubviews() {
         breedList.translatesAutoresizingMaskIntoConstraints = false
+        breedList.dataSource = self
         self.addSubview(breedList)
     }
     
@@ -47,6 +50,37 @@ class CatListView: UIView {
             breedList.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
+    
+}
+
+extension CatListView: UITableViewDataSource {
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return breeds.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CatBreedCell",
+                                                 for: indexPath)
+        
+        let currentBreed = breeds[indexPath.row]
+        
+        if let cell = cell as? CatBreedTableViewCell {
+            
+            cell.breedName.text = currentBreed.breed
+            cell.countryName.text = currentBreed.countryName
+            cell.countryFlag.text = currentBreed.flag
+            cell.coatIcon.image = UIImage(named: currentBreed.coatIcon)
+            cell.layoutIfNeeded()
+        }
+        
+        return cell
+    }
+    
+    
+    
     
 }
 
