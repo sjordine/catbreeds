@@ -22,7 +22,10 @@ class CatListViewModel:NSObject {
                                     object: nil,
                                     userInfo: ["breeds":breeds])
         } catch {
-            
+            let notificationCenter = NotificationCenter.default
+            notificationCenter.post(name: NSNotification.Name("FetchError"),
+                                    object: nil,
+                                    userInfo: ["error":error])
         }
     }
     

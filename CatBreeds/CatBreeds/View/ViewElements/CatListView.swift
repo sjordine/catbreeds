@@ -43,7 +43,6 @@ class CatListView: UIView {
     
     private func setupView() {
         setupSubviews()
-        setupBindings()
         setupLayout()
     }
     
@@ -56,24 +55,7 @@ class CatListView: UIView {
 
     }
     
-    private func setupBindings() {
-        let notificationCenter = NotificationCenter.default
-        
-        notificationCenter.addObserver(self,
-                                       selector: #selector(breedListUpdated(_:)),
-                                       name: Notification.Name("UpdateBreedList"),
-                                       object: nil)
-        
-    }
-    
-    @objc
-    private func breedListUpdated(_ notification: NSNotification) {
-        if let breeds = notification.userInfo?["breeds"] as? [CatBreedInfo] {
-            update(breeds: breeds)
-        }
-    }
-    
-    
+  
     private func setupLayout() {
         NSLayoutConstraint.activate([
             breedList.topAnchor.constraint(equalTo: self.topAnchor),
