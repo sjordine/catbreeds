@@ -27,9 +27,15 @@ class CatListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
+    public func setup() {
         
     }
+    
+    public func update(breeds:[CatBreedInfo]) {
+        self.breeds = breeds
+        self.breedList.reloadData()
+    }
+    
     
     private func setupView() {
         setupSubviews()
@@ -39,7 +45,10 @@ class CatListView: UIView {
     private func setupSubviews() {
         breedList.translatesAutoresizingMaskIntoConstraints = false
         breedList.dataSource = self
+        breedList.register(UINib(nibName: "CatBreedTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "CatBreedCell")
         self.addSubview(breedList)
+
     }
     
     private func setupLayout() {

@@ -34,6 +34,7 @@
 		768CA3722BE7CA9C00BF5116 /* CatCountryDatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3702BE7CA9000BF5116 /* CatCountryDatabaseMock.swift */; };
 		768CA3742BEAA40800BF5116 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3732BEAA40800BF5116 /* CatListView.swift */; };
 		768CA3762BEAA47800BF5116 /* CatListViewCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3752BEAA47800BF5116 /* CatListViewCodeViewController.swift */; };
+		768CA3782BEAAC5D00BF5116 /* CatBreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 768CA3772BEAAC5D00BF5116 /* CatBreedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		768CA3702BE7CA9000BF5116 /* CatCountryDatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCountryDatabaseMock.swift; sourceTree = "<group>"; };
 		768CA3732BEAA40800BF5116 /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		768CA3752BEAA47800BF5116 /* CatListViewCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewCodeViewController.swift; sourceTree = "<group>"; };
+		768CA3772BEAAC5D00BF5116 /* CatBreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatBreedTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				768CA3242BE65C9D00BF5116 /* Main.storyboard */,
 				768CA3452BE66AD100BF5116 /* CatBreedTableViewCell.swift */,
 				768CA3732BEAA40800BF5116 /* CatListView.swift */,
+				768CA3772BEAAC5D00BF5116 /* CatBreedTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				768CA3372BE663E200BF5116 /* CatBreeds.json in Resources */,
 				768CA3282BE65CA000BF5116 /* Assets.xcassets in Resources */,
 				768CA32B2BE65CA000BF5116 /* Base in Resources */,
+				768CA3782BEAAC5D00BF5116 /* CatBreedTableViewCell.xib in Resources */,
 				768CA3552BE6B14E00BF5116 /* Countries.json in Resources */,
 				768CA3262BE65C9D00BF5116 /* Base in Resources */,
 			);
