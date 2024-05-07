@@ -125,8 +125,7 @@
 				768CA32C2BE65CA000BF5116 /* Info.plist */,
 				768CA34F2BE69EEB00BF5116 /* Resources */,
 				768CA34E2BE69EA300BF5116 /* App Specific */,
-				768CA34D2BE69E8900BF5116 /* Controller */,
-				768CA34C2BE69E8400BF5116 /* View */,
+				768CA37D2BEAE55400BF5116 /* View */,
 				768CA37A2BEAE31900BF5116 /* ViewModel */,
 				768CA34B2BE69E7E00BF5116 /* Model */,
 			);
@@ -153,7 +152,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		768CA34C2BE69E8400BF5116 /* View */ = {
+		768CA34C2BE69E8400BF5116 /* ViewElements */ = {
 			isa = PBXGroup;
 			children = (
 				768CA3292BE65CA000BF5116 /* LaunchScreen.storyboard */,
@@ -162,7 +161,7 @@
 				768CA3732BEAA40800BF5116 /* CatListView.swift */,
 				768CA3772BEAAC5D00BF5116 /* CatBreedTableViewCell.xib */,
 			);
-			path = View;
+			path = ViewElements;
 			sourceTree = "<group>";
 		};
 		768CA34D2BE69E8900BF5116 /* Controller */ = {
@@ -233,6 +232,15 @@
 				768CA37B2BEAE33F00BF5116 /* CatListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		768CA37D2BEAE55400BF5116 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				768CA34D2BE69E8900BF5116 /* Controller */,
+				768CA34C2BE69E8400BF5116 /* ViewElements */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
