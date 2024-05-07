@@ -33,7 +33,11 @@ class CatListView: UIView {
     
     public func update(breeds:[CatBreedInfo]) {
         self.breeds = breeds
-        self.breedList.reloadData()
+        Task {
+            await MainActor.run {
+                self.breedList.reloadData()
+            }
+        }
     }
     
     
@@ -106,10 +110,7 @@ extension CatListView: UITableViewDataSource {
         
         return cell
     }
-    
-    
-    
-    
+  
 }
 
 

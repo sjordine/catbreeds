@@ -9,7 +9,7 @@ import UIKit
 
 class CatListViewCodeViewController: UIViewController {
     
-    let catServices = CatServices()
+    let catListViewModel = CatListViewModel()
     
     private lazy var catListView: CatListView = {
             return CatListView()
@@ -30,58 +30,12 @@ class CatListViewCodeViewController: UIViewController {
 
         
         Task {
-            do {
-                let breedsData = try await catServices.retrieveCatBreeds()
-
-                let breeds = prepareBreedsToPresent(breedsData: breedsData)
-
-                let notificationCenter = NotificationCenter.default
-                notificationCenter.post(name: NSNotification.Name("UpdateBreedList"),
-                                        object: nil,
-                                        userInfo: ["breeds":breeds])
-                 
-                
-            } catch {
-                // 4 - Present error, if any
-                showErrorAlert()
-            }
+            await catListViewModel.fetchBreeds()
         }
         
     }
     
     
-    func prepareBreedsToPresent(breedsData: [CatBreedDetail]) -> [CatBreedInfo] {
-        breedsData.map { catBreed in
-            let iconName = coatIcon(from: catBreed.coat)
-            let flag = flag(country: catBreed.countryCode)
-            return CatBreedInfo(breed: catBreed.breed,
-                                countryName: catBreed.country,
-                                coatIcon: iconName,
-                                flag: flag)
-        }
-    }
-    
-    func coatIcon(from coatName: String) -> String {
-        switch coatName.lowercased() {
-        case "short":
-            return "shortIcon"
-        case "long":
-            return "longIcon"
-        case "hairless/furry down":
-            return "hairlessIcon"
-        default:
-            return ""
-        }
-    }
-    
-    func flag(country:String) -> String {
-        let base : UInt32 = 127397
-        var s = ""
-        for v in country.unicodeScalars {
-            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
-        }
-        return String(s)
-    }
     
     func showErrorAlert() {
         let alert = UIAlertController(title: "Error!",

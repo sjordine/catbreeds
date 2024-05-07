@@ -35,6 +35,7 @@
 		768CA3742BEAA40800BF5116 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3732BEAA40800BF5116 /* CatListView.swift */; };
 		768CA3762BEAA47800BF5116 /* CatListViewCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA3752BEAA47800BF5116 /* CatListViewCodeViewController.swift */; };
 		768CA3782BEAAC5D00BF5116 /* CatBreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 768CA3772BEAAC5D00BF5116 /* CatBreedTableViewCell.xib */; };
+		768CA37C2BEAE33F00BF5116 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CA37B2BEAE33F00BF5116 /* CatListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		768CA3732BEAA40800BF5116 /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		768CA3752BEAA47800BF5116 /* CatListViewCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewCodeViewController.swift; sourceTree = "<group>"; };
 		768CA3772BEAAC5D00BF5116 /* CatBreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatBreedTableViewCell.xib; sourceTree = "<group>"; };
+		768CA37B2BEAE33F00BF5116 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				768CA34E2BE69EA300BF5116 /* App Specific */,
 				768CA34D2BE69E8900BF5116 /* Controller */,
 				768CA34C2BE69E8400BF5116 /* View */,
+				768CA37A2BEAE31900BF5116 /* ViewModel */,
 				768CA34B2BE69E7E00BF5116 /* Model */,
 			);
 			path = CatBreeds;
@@ -222,6 +225,14 @@
 				768CA35C2BE6B47D00BF5116 /* CatBreedDetail.swift */,
 			);
 			path = DataInterface;
+			sourceTree = "<group>";
+		};
+		768CA37A2BEAE31900BF5116 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				768CA37B2BEAE33F00BF5116 /* CatListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				768CA3632BE6B79E00BF5116 /* CatFileDataAccess.swift in Sources */,
 				768CA3742BEAA40800BF5116 /* CatListView.swift in Sources */,
 				768CA3762BEAA47800BF5116 /* CatListViewCodeViewController.swift in Sources */,
+				768CA37C2BEAE33F00BF5116 /* CatListViewModel.swift in Sources */,
 				768CA3692BE7242300BF5116 /* CatAPIData.swift in Sources */,
 				768CA31F2BE65C9D00BF5116 /* AppDelegate.swift in Sources */,
 				768CA36B2BE7261200BF5116 /* CatDatabase.swift in Sources */,
