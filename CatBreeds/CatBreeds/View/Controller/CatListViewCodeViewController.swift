@@ -39,26 +39,30 @@ class CatListViewCodeViewController: UIViewController {
     func setupBindings() {
         let notificationCenter = NotificationCenter.default
         
-        notificationCenter.addObserver(self,
-                                       selector: #selector(breedListUpdated(_:)),
-                                       name: Notification.Name("UpdateBreedList"),
-                                       object: nil)
         
-        notificationCenter.addObserver(self,
-                                       selector: #selector(breedListError(_:)),
-                                       name: Notification.Name("FetchError"),
-                                       object: nil)
+        notificationCenter.addObserver(forName: Notification.Name("UpdateBreedList"),
+                                       object: nil, 
+                                       queue: OperationQueue.main) { notification in
+            self.breedListUpdated(notification)
+        }
+        
+        notificationCenter.addObserver(forName: Notification.Name("FetchError"),
+                                       object: nil,
+                                       queue: OperationQueue.main) { notification in
+            self.breedListError(notification)
+        }
+        
+
     }
     
-    @objc
-    private func breedListUpdated(_ notification: NSNotification) {
+  
+    private func breedListUpdated(_ notification: Notification) {
         if let breeds = notification.userInfo?["breeds"] as? [CatBreedInfo] {
             catListView.update(breeds: breeds)
         }
     }
     
-    @objc
-    private func breedListError(_ notification: NSNotification) {
+    private func breedListError(_ notification: Notification) {
         if let _ = notification.userInfo?["error"] as? Error {
             showErrorAlert()
         }

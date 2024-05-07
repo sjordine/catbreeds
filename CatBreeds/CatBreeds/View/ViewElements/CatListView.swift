@@ -33,11 +33,7 @@ class CatListView: UIView {
     
     public func update(breeds:[CatBreedInfo]) {
         self.breeds = breeds
-        Task {
-            await MainActor.run {
-                self.breedList.reloadData()
-            }
-        }
+        self.breedList.reloadData()
     }
     
     
@@ -52,10 +48,10 @@ class CatListView: UIView {
         breedList.register(UINib(nibName: "CatBreedTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "CatBreedCell")
         self.addSubview(breedList)
-
+        
     }
     
-  
+    
     private func setupLayout() {
         NSLayoutConstraint.activate([
             breedList.topAnchor.constraint(equalTo: self.topAnchor),
@@ -92,7 +88,7 @@ extension CatListView: UITableViewDataSource {
         
         return cell
     }
-  
+    
 }
 
 

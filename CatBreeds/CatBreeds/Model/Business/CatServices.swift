@@ -11,7 +11,7 @@ struct CatServices {
     
     var countryDatabase = CountryDataBase.shared
 
-    var catBreedDatabase: CatDatabase = CatFileDataAccess()
+    var catBreedDatabase: CatDatabase = CatAPIDataAccess()
     
     func retrieveCatBreeds() async throws -> [CatBreedDetail] {
         
