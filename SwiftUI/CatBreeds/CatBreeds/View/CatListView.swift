@@ -13,7 +13,19 @@ struct CatListView: View {
     
     var body: some View {
         List(viewModel.breeds) { breed in
-            Text(breed.breed)
+            HStack {
+                Image(breed.coatIcon)
+                    .foregroundStyle(.blue)
+                    .frame(width: 50,
+                           height: 50)
+                VStack {
+                    Text(breed.breed)
+                    HStack {
+                        Text(breed.flag)
+                        Text(breed.countryName)
+                    }
+                }
+            }
         }
         .alert(isPresented: $viewModel.presentError) {
             Alert(
