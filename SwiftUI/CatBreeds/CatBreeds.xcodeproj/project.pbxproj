@@ -49,8 +49,8 @@
 		769F10BC2BED2290009B2CD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		769F10C72BED238A009B2CD8 /* CatBreedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBreedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		769F10C92BED238A009B2CD8 /* CatBreedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsTests.swift; sourceTree = "<group>"; };
-		769F10D52BED245D009B2CD8 /* CatBreeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CatBreeds.json; path = ../../../../CatBreeds/CatBreeds/Resources/CatBreeds.json; sourceTree = "<group>"; };
-		769F10D62BED245D009B2CD8 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Countries.json; path = ../../../../CatBreeds/CatBreeds/Resources/Countries.json; sourceTree = "<group>"; };
+		769F10D52BED245D009B2CD8 /* CatBreeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CatBreeds.json; sourceTree = "<group>"; };
+		769F10D62BED245D009B2CD8 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		769F10D92BED2474009B2CD8 /* CatAPIData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatAPIData.swift; sourceTree = "<group>"; };
 		769F10DA2BED2474009B2CD8 /* CatAPIDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatAPIDataAccess.swift; sourceTree = "<group>"; };
 		769F10DB2BED2474009B2CD8 /* CatAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatAPIError.swift; sourceTree = "<group>"; };
@@ -136,6 +136,8 @@
 		769F10D02BED23A4009B2CD8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				769F10D52BED245D009B2CD8 /* CatBreeds.json */,
+				769F10D62BED245D009B2CD8 /* Countries.json */,
 				769F10B92BED2290009B2CD8 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -164,8 +166,6 @@
 		769F10D32BED23C3009B2CD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				769F10D52BED245D009B2CD8 /* CatBreeds.json */,
-				769F10D62BED245D009B2CD8 /* Countries.json */,
 				769F10B72BED228F009B2CD8 /* CatListView.swift */,
 			);
 			path = View;

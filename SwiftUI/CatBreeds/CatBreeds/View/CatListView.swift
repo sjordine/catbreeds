@@ -14,11 +14,19 @@ struct CatListView: View {
     var body: some View {
         List(viewModel.breeds) { breed in
             Text(breed.breed)
-        }.onAppear {
+        }
+        .alert(isPresented: $viewModel.presentError) {
+            Alert(
+                title: Text("Error!"),
+                message: Text("An error ocurred while getting cat breeds. Please contact suport!")
+            )
+        }
+        .onAppear {
             Task {
                 await viewModel.fetchBreeds()
             }
         }
+        
     }
 }
 

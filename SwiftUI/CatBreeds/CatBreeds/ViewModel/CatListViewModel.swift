@@ -12,16 +12,19 @@ class CatListViewModel:ObservableObject {
     var catServices = CatServices()
     
     @Published var breeds: [CatBreedInfo] = []
-    @Published var error: Error? = nil
+    @Published var presentError: Bool = false
     
     func fetchBreeds() async {
         do {
             let breedsData = try await catServices.retrieveCatBreeds()
             await MainActor.run {
+                presentError = false
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
             }
         } catch {
-            self.error = error
+            await MainActor.run {
+                presentError = true
+            }
         }
     }
     
