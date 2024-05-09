@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class CatListViewModel:ObservableObject {
     
     var catServices = CatServices()
@@ -15,14 +16,12 @@ class CatListViewModel:ObservableObject {
     @Published var presentError: Bool = false
     
     func fetchBreeds() async {
-        do {
-            let breedsData = try await catServices.retrieveCatBreeds()
-            await MainActor.run {
+        Task {
+            do {
+                let breedsData = try await catServices.retrieveCatBreeds()
                 presentError = false
                 breeds = prepareBreedsToPresent(breedsData: breedsData)
-            }
-        } catch {
-            await MainActor.run {
+            } catch {
                 presentError = true
             }
         }

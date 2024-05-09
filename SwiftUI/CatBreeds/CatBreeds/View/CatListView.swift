@@ -21,10 +21,8 @@ struct CatListView: View {
                 message: Text("An error ocurred while getting cat breeds. Please contact suport!")
             )
         }
-        .onAppear {
-            Task {
-                await viewModel.fetchBreeds()
-            }
+        .task {
+            await viewModel.fetchBreeds()
         }
         
     }
