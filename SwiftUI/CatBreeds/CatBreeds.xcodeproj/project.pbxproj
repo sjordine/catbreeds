@@ -8,10 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		769F10B62BED228F009B2CD8 /* CatBreedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10B52BED228F009B2CD8 /* CatBreedsApp.swift */; };
-		769F10B82BED228F009B2CD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10B72BED228F009B2CD8 /* ContentView.swift */; };
+		769F10B82BED228F009B2CD8 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10B72BED228F009B2CD8 /* CatListView.swift */; };
 		769F10BA2BED2290009B2CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769F10B92BED2290009B2CD8 /* Assets.xcassets */; };
 		769F10BD2BED2290009B2CD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769F10BC2BED2290009B2CD8 /* Preview Assets.xcassets */; };
 		769F10CA2BED238A009B2CD8 /* CatBreedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10C92BED238A009B2CD8 /* CatBreedsTests.swift */; };
+		769F10D72BED245D009B2CD8 /* CatBreeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 769F10D52BED245D009B2CD8 /* CatBreeds.json */; };
+		769F10D82BED245D009B2CD8 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 769F10D62BED245D009B2CD8 /* Countries.json */; };
+		769F10E92BED2474009B2CD8 /* CatAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10D92BED2474009B2CD8 /* CatAPIData.swift */; };
+		769F10EA2BED2474009B2CD8 /* CatAPIDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10DA2BED2474009B2CD8 /* CatAPIDataAccess.swift */; };
+		769F10EB2BED2474009B2CD8 /* CatAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10DB2BED2474009B2CD8 /* CatAPIError.swift */; };
+		769F10EC2BED2474009B2CD8 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10DC2BED2474009B2CD8 /* CatBreed.swift */; };
+		769F10ED2BED2474009B2CD8 /* CatBreedFileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10DD2BED2474009B2CD8 /* CatBreedFileError.swift */; };
+		769F10EE2BED2474009B2CD8 /* CatDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10DE2BED2474009B2CD8 /* CatDatabase.swift */; };
+		769F10EF2BED2474009B2CD8 /* CatFileDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10DF2BED2474009B2CD8 /* CatFileDataAccess.swift */; };
+		769F10F02BED2474009B2CD8 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E02BED2474009B2CD8 /* Country.swift */; };
+		769F10F12BED2474009B2CD8 /* CountryDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E12BED2474009B2CD8 /* CountryDataBase.swift */; };
+		769F10F22BED2474009B2CD8 /* CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E22BED2474009B2CD8 /* CountryName.swift */; };
+		769F10F32BED2474009B2CD8 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */; };
+		769F10F42BED2474009B2CD8 /* CatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E52BED2474009B2CD8 /* CatServices.swift */; };
+		769F10F52BED2474009B2CD8 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,11 +42,26 @@
 /* Begin PBXFileReference section */
 		769F10B22BED228F009B2CD8 /* CatBreeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatBreeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769F10B52BED228F009B2CD8 /* CatBreedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsApp.swift; sourceTree = "<group>"; };
-		769F10B72BED228F009B2CD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		769F10B72BED228F009B2CD8 /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		769F10B92BED2290009B2CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		769F10BC2BED2290009B2CD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		769F10C72BED238A009B2CD8 /* CatBreedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBreedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		769F10C92BED238A009B2CD8 /* CatBreedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsTests.swift; sourceTree = "<group>"; };
+		769F10D52BED245D009B2CD8 /* CatBreeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CatBreeds.json; path = ../../../../CatBreeds/CatBreeds/Resources/CatBreeds.json; sourceTree = "<group>"; };
+		769F10D62BED245D009B2CD8 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Countries.json; path = ../../../../CatBreeds/CatBreeds/Resources/Countries.json; sourceTree = "<group>"; };
+		769F10D92BED2474009B2CD8 /* CatAPIData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatAPIData.swift; sourceTree = "<group>"; };
+		769F10DA2BED2474009B2CD8 /* CatAPIDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatAPIDataAccess.swift; sourceTree = "<group>"; };
+		769F10DB2BED2474009B2CD8 /* CatAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatAPIError.swift; sourceTree = "<group>"; };
+		769F10DC2BED2474009B2CD8 /* CatBreed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
+		769F10DD2BED2474009B2CD8 /* CatBreedFileError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatBreedFileError.swift; sourceTree = "<group>"; };
+		769F10DE2BED2474009B2CD8 /* CatDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatDatabase.swift; sourceTree = "<group>"; };
+		769F10DF2BED2474009B2CD8 /* CatFileDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatFileDataAccess.swift; sourceTree = "<group>"; };
+		769F10E02BED2474009B2CD8 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		769F10E12BED2474009B2CD8 /* CountryDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDataBase.swift; sourceTree = "<group>"; };
+		769F10E22BED2474009B2CD8 /* CountryName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryName.swift; sourceTree = "<group>"; };
+		769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatBreedDetail.swift; path = ../../../../CatBreeds/CatBreeds/Model/DataInterface/CatBreedDetail.swift; sourceTree = "<group>"; };
+		769F10E52BED2474009B2CD8 /* CatServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatServices.swift; sourceTree = "<group>"; };
+		769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatBreedDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +140,10 @@
 		769F10D12BED23AC009B2CD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				769F10E62BED2474009B2CD8 /* Business */,
+				769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */,
+				769F10E82BED2474009B2CD8 /* DataInterface */,
+				769F10E32BED2474009B2CD8 /* Persistence */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,7 +158,9 @@
 		769F10D32BED23C3009B2CD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				769F10B72BED228F009B2CD8 /* ContentView.swift */,
+				769F10D52BED245D009B2CD8 /* CatBreeds.json */,
+				769F10D62BED245D009B2CD8 /* Countries.json */,
+				769F10B72BED228F009B2CD8 /* CatListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +171,42 @@
 				769F10B52BED228F009B2CD8 /* CatBreedsApp.swift */,
 			);
 			path = "App Specific";
+			sourceTree = "<group>";
+		};
+		769F10E32BED2474009B2CD8 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				769F10D92BED2474009B2CD8 /* CatAPIData.swift */,
+				769F10DA2BED2474009B2CD8 /* CatAPIDataAccess.swift */,
+				769F10DB2BED2474009B2CD8 /* CatAPIError.swift */,
+				769F10DC2BED2474009B2CD8 /* CatBreed.swift */,
+				769F10DD2BED2474009B2CD8 /* CatBreedFileError.swift */,
+				769F10DE2BED2474009B2CD8 /* CatDatabase.swift */,
+				769F10DF2BED2474009B2CD8 /* CatFileDataAccess.swift */,
+				769F10E02BED2474009B2CD8 /* Country.swift */,
+				769F10E12BED2474009B2CD8 /* CountryDataBase.swift */,
+				769F10E22BED2474009B2CD8 /* CountryName.swift */,
+			);
+			name = Persistence;
+			path = ../../../../CatBreeds/CatBreeds/Model/Persistence;
+			sourceTree = "<group>";
+		};
+		769F10E62BED2474009B2CD8 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				769F10E52BED2474009B2CD8 /* CatServices.swift */,
+			);
+			name = Business;
+			path = ../../../../CatBreeds/CatBreeds/Model/Business;
+			sourceTree = "<group>";
+		};
+		769F10E82BED2474009B2CD8 /* DataInterface */ = {
+			isa = PBXGroup;
+			children = (
+				769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */,
+			);
+			name = DataInterface;
+			path = ../../../../CatBreeds/CatBreeds/Model/DataInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				769F10BD2BED2290009B2CD8 /* Preview Assets.xcassets in Resources */,
+				769F10D72BED245D009B2CD8 /* CatBreeds.json in Resources */,
+				769F10D82BED245D009B2CD8 /* Countries.json in Resources */,
 				769F10BA2BED2290009B2CD8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,8 +311,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				769F10B82BED228F009B2CD8 /* ContentView.swift in Sources */,
+				769F10EB2BED2474009B2CD8 /* CatAPIError.swift in Sources */,
+				769F10F32BED2474009B2CD8 /* CatBreedDetail.swift in Sources */,
+				769F10EE2BED2474009B2CD8 /* CatDatabase.swift in Sources */,
+				769F10F12BED2474009B2CD8 /* CountryDataBase.swift in Sources */,
+				769F10B82BED228F009B2CD8 /* CatListView.swift in Sources */,
+				769F10E92BED2474009B2CD8 /* CatAPIData.swift in Sources */,
+				769F10F22BED2474009B2CD8 /* CountryName.swift in Sources */,
+				769F10EC2BED2474009B2CD8 /* CatBreed.swift in Sources */,
+				769F10F52BED2474009B2CD8 /* CatBreedDetail.swift in Sources */,
+				769F10F42BED2474009B2CD8 /* CatServices.swift in Sources */,
 				769F10B62BED228F009B2CD8 /* CatBreedsApp.swift in Sources */,
+				769F10EF2BED2474009B2CD8 /* CatFileDataAccess.swift in Sources */,
+				769F10ED2BED2474009B2CD8 /* CatBreedFileError.swift in Sources */,
+				769F10F02BED2474009B2CD8 /* Country.swift in Sources */,
+				769F10EA2BED2474009B2CD8 /* CatAPIDataAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
