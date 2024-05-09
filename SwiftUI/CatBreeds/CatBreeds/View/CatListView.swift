@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CatListView: View {
     
-    @StateObject var viewModel = CatListViewModel()
+    @State var viewModel = CatListViewModel()
     
     var body: some View {
         List(viewModel.breeds) { breed in

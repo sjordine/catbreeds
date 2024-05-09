@@ -24,12 +24,11 @@
 		769F10F02BED2474009B2CD8 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E02BED2474009B2CD8 /* Country.swift */; };
 		769F10F12BED2474009B2CD8 /* CountryDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E12BED2474009B2CD8 /* CountryDataBase.swift */; };
 		769F10F22BED2474009B2CD8 /* CountryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E22BED2474009B2CD8 /* CountryName.swift */; };
-		769F10F32BED2474009B2CD8 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */; };
 		769F10F42BED2474009B2CD8 /* CatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E52BED2474009B2CD8 /* CatServices.swift */; };
-		769F10F52BED2474009B2CD8 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */; };
 		769F10F72BED24B4009B2CD8 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10F62BED24B4009B2CD8 /* CatListViewModel.swift */; };
 		769F10F92BED2506009B2CD8 /* CatBreedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10F82BED2506009B2CD8 /* CatBreedInfo.swift */; };
 		769F10FB2BED2A8C009B2CD8 /* CatBreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10FA2BED2A8C009B2CD8 /* CatBreedCell.swift */; };
+		769F10FF2BED2D8B009B2CD8 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10FE2BED2D8B009B2CD8 /* CatBreedDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +61,11 @@
 		769F10E02BED2474009B2CD8 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		769F10E12BED2474009B2CD8 /* CountryDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDataBase.swift; sourceTree = "<group>"; };
 		769F10E22BED2474009B2CD8 /* CountryName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryName.swift; sourceTree = "<group>"; };
-		769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatBreedDetail.swift; path = ../../../../CatBreeds/CatBreeds/Model/DataInterface/CatBreedDetail.swift; sourceTree = "<group>"; };
 		769F10E52BED2474009B2CD8 /* CatServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatServices.swift; sourceTree = "<group>"; };
-		769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatBreedDetail.swift; sourceTree = "<group>"; };
 		769F10F62BED24B4009B2CD8 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
 		769F10F82BED2506009B2CD8 /* CatBreedInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatBreedInfo.swift; path = ../../../../CatBreeds/CatBreeds/View/Controller/CatBreedInfo.swift; sourceTree = "<group>"; };
 		769F10FA2BED2A8C009B2CD8 /* CatBreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedCell.swift; sourceTree = "<group>"; };
+		769F10FE2BED2D8B009B2CD8 /* CatBreedDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatBreedDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				769F10E62BED2474009B2CD8 /* Business */,
-				769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */,
 				769F10E82BED2474009B2CD8 /* DataInterface */,
 				769F10E32BED2474009B2CD8 /* Persistence */,
 			);
@@ -212,7 +209,7 @@
 		769F10E82BED2474009B2CD8 /* DataInterface */ = {
 			isa = PBXGroup;
 			children = (
-				769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */,
+				769F10FE2BED2D8B009B2CD8 /* CatBreedDetail.swift */,
 			);
 			name = DataInterface;
 			path = ../../../../CatBreeds/CatBreeds/Model/DataInterface;
@@ -324,20 +321,19 @@
 				769F10F92BED2506009B2CD8 /* CatBreedInfo.swift in Sources */,
 				769F10F72BED24B4009B2CD8 /* CatListViewModel.swift in Sources */,
 				769F10FB2BED2A8C009B2CD8 /* CatBreedCell.swift in Sources */,
-				769F10F32BED2474009B2CD8 /* CatBreedDetail.swift in Sources */,
 				769F10EE2BED2474009B2CD8 /* CatDatabase.swift in Sources */,
 				769F10F12BED2474009B2CD8 /* CountryDataBase.swift in Sources */,
 				769F10B82BED228F009B2CD8 /* CatListView.swift in Sources */,
 				769F10E92BED2474009B2CD8 /* CatAPIData.swift in Sources */,
 				769F10F22BED2474009B2CD8 /* CountryName.swift in Sources */,
 				769F10EC2BED2474009B2CD8 /* CatBreed.swift in Sources */,
-				769F10F52BED2474009B2CD8 /* CatBreedDetail.swift in Sources */,
 				769F10F42BED2474009B2CD8 /* CatServices.swift in Sources */,
 				769F10B62BED228F009B2CD8 /* CatBreedsApp.swift in Sources */,
 				769F10EF2BED2474009B2CD8 /* CatFileDataAccess.swift in Sources */,
 				769F10ED2BED2474009B2CD8 /* CatBreedFileError.swift in Sources */,
 				769F10F02BED2474009B2CD8 /* Country.swift in Sources */,
 				769F10EA2BED2474009B2CD8 /* CatAPIDataAccess.swift in Sources */,
+				769F10FF2BED2D8B009B2CD8 /* CatBreedDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

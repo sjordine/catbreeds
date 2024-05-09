@@ -7,13 +7,14 @@
 
 import Foundation
 
-@MainActor
+
+@Observable
 class CatListViewModel:ObservableObject {
     
     var catServices = CatServices()
     
-    @Published var breeds: [CatBreedInfo] = []
-    @Published var presentError: Bool = false
+    var breeds: [CatBreedInfo] = []
+    var presentError: Bool = false
     
     func fetchBreeds() async {
         Task {
