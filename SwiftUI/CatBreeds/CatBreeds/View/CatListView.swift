@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct CatListView: View {
+    
+    @StateObject var viewModel = CatListViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List(viewModel.breeds) { breed in
+            Text(breed.breed)
+        }.onAppear {
+            Task {
+                await viewModel.fetchBreeds()
+            }
         }
-        .padding()
     }
 }
 

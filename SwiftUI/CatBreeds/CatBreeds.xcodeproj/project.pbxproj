@@ -27,6 +27,8 @@
 		769F10F32BED2474009B2CD8 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */; };
 		769F10F42BED2474009B2CD8 /* CatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E52BED2474009B2CD8 /* CatServices.swift */; };
 		769F10F52BED2474009B2CD8 /* CatBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */; };
+		769F10F72BED24B4009B2CD8 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10F62BED24B4009B2CD8 /* CatListViewModel.swift */; };
+		769F10F92BED2506009B2CD8 /* CatBreedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F10F82BED2506009B2CD8 /* CatBreedInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		769F10E42BED2474009B2CD8 /* CatBreedDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatBreedDetail.swift; path = ../../../../CatBreeds/CatBreeds/Model/DataInterface/CatBreedDetail.swift; sourceTree = "<group>"; };
 		769F10E52BED2474009B2CD8 /* CatServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatServices.swift; sourceTree = "<group>"; };
 		769F10E72BED2474009B2CD8 /* CatBreedDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatBreedDetail.swift; sourceTree = "<group>"; };
+		769F10F62BED24B4009B2CD8 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
+		769F10F82BED2506009B2CD8 /* CatBreedInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatBreedInfo.swift; path = ../../../../CatBreeds/CatBreeds/View/Controller/CatBreedInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 		769F10D22BED23B1009B2CD8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				769F10F82BED2506009B2CD8 /* CatBreedInfo.swift */,
+				769F10F62BED24B4009B2CD8 /* CatListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -312,6 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				769F10EB2BED2474009B2CD8 /* CatAPIError.swift in Sources */,
+				769F10F92BED2506009B2CD8 /* CatBreedInfo.swift in Sources */,
+				769F10F72BED24B4009B2CD8 /* CatListViewModel.swift in Sources */,
 				769F10F32BED2474009B2CD8 /* CatBreedDetail.swift in Sources */,
 				769F10EE2BED2474009B2CD8 /* CatDatabase.swift in Sources */,
 				769F10F12BED2474009B2CD8 /* CountryDataBase.swift in Sources */,

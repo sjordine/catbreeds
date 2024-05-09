@@ -8,7 +8,12 @@
 import Foundation
 
 
-struct CatBreedInfo {
+struct CatBreedInfo: Identifiable {
+    
+    var id: String {
+        breed
+    }
+    
     var breed: String
     var countryName: String
     var coatIcon: String
